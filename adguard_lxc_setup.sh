@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ./build.func
+source <(curl -s https://raw.githubusercontent.com/Nirioppai/nirio-proxmox/main/misc/build.func)
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
@@ -25,14 +25,11 @@ var_cpu="1"
 var_ram="512"
 var_os="debian"
 var_version="12"
-
-# Ensure required functions are available
-source ./build.func
 variables
 color
 catch_errors
 
-default_settings() {
+function default_settings() {
   CT_TYPE="1"
   PW=""
   CT_ID=$NEXTID
@@ -56,7 +53,7 @@ default_settings() {
   echo_default
 }
 
-update_script() {
+function update_script() {
 header_info
 if [[ ! -d /opt/AdGuardHome ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
 if (( $(df /boot | awk 'NR==2{gsub("%","",$5); print $5}') > 80 )); then
