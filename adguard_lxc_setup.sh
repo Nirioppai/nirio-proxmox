@@ -5,16 +5,19 @@ source <(curl -s https://raw.githubusercontent.com/Nirioppai/nirio-proxmox/main/
 # License: MIT
 # https://github.com/tteck/Proxmox/raw/main/LICENSE
 
+# https://patorjk.com/software/taag/#p=display&h=0&v=0&f=Jazmine&t=Nirio%20Adguard
 function header_info {
 clear
-cat <<"EOF"
-    ___       __                           __
-   /   | ____/ /___ ___  ______ __________/ /
-  / /| |/ __  / __  / / / / __  / ___/ __  / 
- / ___ / /_/ / /_/ / /_/ / /_/ / /  / /_/ /  
-/_/  |_\__,_/\__, /\__,_/\__,_/_/   \__,_/   
-            /____/                           
- 
+cat <<"EOF"                                                                    
+o    o  o        o               .oo      8                                 8 
+8b   8                          .P 8      8                                 8 
+8`b  8 o8 oPYo. o8 .oPYo.      .P  8 .oPYo8 .oPYo. o    o .oPYo. oPYo. .oPYo8 
+8 `b 8  8 8  `'  8 8    8     oPooo8 8    8 8    8 8    8 .oooo8 8  `' 8    8 
+8  `b8  8 8      8 8    8    .P    8 8    8 8    8 8    8 8    8 8     8    8 
+8   `8  8 8      8 `YooP'   .P     8 `YooP' `YooP8 `YooP' `YooP8 8     `YooP' 
+..:::..:....:::::..:.....:::..:::::..:.....::....8 :.....::.....:..:::::.....:
+::::::::::::::::::::::::::::::::::::::::::::::ooP'.:::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::...:::::::::::::::::::::::::::::
 EOF
 }
 header_info
