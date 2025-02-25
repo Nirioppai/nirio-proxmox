@@ -25,11 +25,14 @@ var_cpu="1"
 var_ram="512"
 var_os="debian"
 var_version="12"
+
+# Ensure required functions are available
+source ./build.func
 variables
 color
 catch_errors
 
-function default_settings() {
+default_settings() {
   CT_TYPE="1"
   PW=""
   CT_ID=$NEXTID
@@ -53,7 +56,7 @@ function default_settings() {
   echo_default
 }
 
-function update_script() {
+update_script() {
 header_info
 if [[ ! -d /opt/AdGuardHome ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
 if (( $(df /boot | awk 'NR==2{gsub("%","",$5); print $5}') > 80 )); then
