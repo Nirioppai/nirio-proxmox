@@ -20,7 +20,7 @@ EOF
 header_info
 echo -e "Loading..."
 APP="Adguard"
-var_disk="2"
+var_disk="1"
 var_cpu="1"
 var_ram="512"
 var_os="debian"
